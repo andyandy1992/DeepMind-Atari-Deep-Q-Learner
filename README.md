@@ -2,7 +2,8 @@
 This repository hosts the [original code](https://sites.google.com/a/deepmind.com/dqn/) published along with [the article](http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html) in Nature and my experiments (if any) with it.
 
 Tested on Ubuntu 14.04 with nVidia GTX 970:  
-![alt text](https://raw.githubusercontent.com/kuz/DeepMind-Atari-Deep-Q-Learner/master/images/breakout.gif "Playing Breakout")
+![alt text](https://raw.githubusercontent.com/kuz/DeepMind-Atari-Deep-Q-Learner/master/gifs/breakout.gif "Playing Breakout")
+More videos on [YouTube Playlist: Deepmind DQN Playing](https://www.youtube.com/playlist?list=PLgOp827qARy0qNyZq5Y6S6vRJO3tb1WcW)
 
 ###Useful Links (ordered by date):
 * [Original article](http://arxiv.org/abs/1312.5602). ***Submitted on 19 Dec 2013***
@@ -83,6 +84,17 @@ specified GPU by setting the environment variable GPU_ID, e.g. by
     GPU_ID=2 ./run_gpu <game name>
 
 If GPU_ID is not specified, the first available GPU (ID 0) will be used by default.
+
+Storing a .gif for a trained network
+------------------------------------
+
+Once you have a snapshot of a network you can run
+
+	./test_gpu <game name> <snapshopt filename>
+
+to make it play one game and store the .gif under `gifs`. For example
+
+	./test_gpu breakout DQN3_0_1_breakout_FULL_Y.t7
 
 Options
 -------

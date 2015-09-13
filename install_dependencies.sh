@@ -33,6 +33,9 @@ sudo apt-get install -qqy libpng-dev
 sudo apt-get install -qqy ncurses-dev
 sudo apt-get install -qqy imagemagick
 sudo apt-get install -qqy unzip
+sudo apt-get install -qqy libqt4-dev
+sudo apt-get install -qqy liblua5.1-0-dev
+sudo apt-get install -qqy libgd-dev
 sudo apt-get update
 
 
@@ -83,6 +86,8 @@ $PREFIX/bin/luarocks install sys
 $PREFIX/bin/luarocks install xlua
 $PREFIX/bin/luarocks install image
 $PREFIX/bin/luarocks install env
+$PREFIX/bin/luarocks install qtlua
+$PREFIX/bin/luarocks install qttorch
 
 echo ""
 echo "=> Torch7 has been installed successfully"
@@ -111,6 +116,17 @@ cd alewrap
 $PREFIX/bin/luarocks make
 RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
 echo "Alewrap installation completed"
+
+echo "Installing Lua-GD ... "
+mkdir $PREFIX/src
+cd $PREFIX/src
+rm -rf lua-gd
+git clone https://github.com/ittner/lua-gd.git
+cd lua-gd
+sed -i "s/LUABIN=lua5.1/LUABIN=..\/..\/bin\/luajit/" Makefile
+$PREFIX/bin/luarocks make
+RET=$?; if [ $RET -ne 0 ]; then echo "Error. Exiting."; exit $RET; fi
+echo "Lua-GD installation completed"
 
 echo
 echo "You can run experiments by executing: "
