@@ -10,7 +10,7 @@ More videos on [YouTube Playlist: Deepmind DQN Playing](https://www.youtube.com/
 * [Robohub article](http://robohub.org/artificial-general-intelligence-that-plays-atari-video-games-how-did-deepmind-do-it/) regarding DeepMind's implementation by the authors of [Replicating-DeepMind](https://github.com/kristjankorjus/Replicating-DeepMind). ***September 25, 2014***
  * [Technical details](https://github.com/kristjankorjus/Replicating-DeepMind/blob/master/doc/report/report.pdf) of their implementation. ***15 Jun 2014***
 * [Nature article](http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html). ***26 February 2015***
-* [Video Lecture](http://videolectures.net/rldm2015_silver_reinforcement_learning/?q=deep%20learning) by David Silver of Deepmind discussing the implementation.*** June 2015***
+* [Video Lecture](http://videolectures.net/rldm2015_silver_reinforcement_learning/?q=deep%20learning) by David Silver of Deepmind discussing the implementation. ***June 2015***
 
 
 Here is the original README:
